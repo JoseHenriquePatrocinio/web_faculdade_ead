@@ -37,14 +37,26 @@
         <!-- Cursos -->
         <v-card id="cursos">
             <v-card-title>Cursos</v-card-title>
-            <v-card-text>
-                Confira abaixo alguns dos cursos oferecidos em nossa faculdade:
-                <ul>
-                    <li>Engenharia de Software</li>
-                    <li>Ciência da Computação</li>
-                    <li>Administração de Empresas</li>
-                </ul>
-            </v-card-text>
+            <v-carousel>
+                <v-carousel-item
+                    src="https://img.freepik.com/psd-gratuitas/modelo-de-impressao-de-marketing-com-foto_23-2148947056.jpg?w=740&t=st=1711428170~exp=1711428770~hmac=2fb3e31dbd720bf801e5bb7e2f9d054cf1a122c5cfef7d26d8d4a1184ee4e723"
+                    class="carousel-item" :contain="shouldContain"></v-carousel-item>
+                <v-carousel-item
+                    src="https://img.freepik.com/psd-gratuitas/modelo-de-poster-para-aula-de-arte-online_23-2149020959.jpg?w=740&t=st=1711427655~exp=1711428255~hmac=3bb15b39a7d1bb7f87781063953ef073149553e9594088c67e98438dbd3ee5a5"
+                    class="carousel-item" :contain="shouldContain"></v-carousel-item>
+                <v-carousel-item
+                    src="https://img.freepik.com/psd-gratuitas/modelo-de-impressao-comercial-com-foto_23-2148904321.jpg?w=740&t=st=1711427726~exp=1711428326~hmac=5e44ce62fa7e80a3100c826a09ec3853722c77a7293c8e12eaa04177a88c02d2"
+                    class="carousel-item" :contain="shouldContain"></v-carousel-item>
+                <v-carousel-item
+                    src="https://img.freepik.com/psd-gratuitas/modelo-de-banner-de-midia-social-para-dentista-e-atendimento-odontologico_120329-1313.jpg?w=740&t=st=1711427893~exp=1711428493~hmac=d269b8a66a12d4c6fb82a556aada5762f86a75720b2922b9367f4aadccd60b00"
+                    class="carousel-item" :contain="shouldContain"></v-carousel-item>
+                <v-carousel-item
+                    src="https://img.freepik.com/vetores-premium/modelo-de-banner-da-web-e-midia-social-corporativa-para-agencia-de-marketing-digital_123589-55.jpg?w=740"
+                    class="carousel-item" :contain="shouldContain"></v-carousel-item>
+                <v-carousel-item
+                    src="https://img.freepik.com/psd-premium/agencia-de-marketing-digital-e-design-de-modelo-de-banner-de-postagem-de-midia-social-corporativa_494960-208.jpg?w=740"
+                    class="carousel-item" :contain="shouldContain"></v-carousel-item>
+            </v-carousel>
         </v-card>
 
         <br>
@@ -58,12 +70,18 @@
 
 <script>
 export default {
+    components: {
+
+    },
     data: () => ({
         tab: null,
-        isScrolled: false
+        isScrolled: false,
+        shouldContain: false
     }),
     mounted() {
         window.addEventListener('scroll', this.handleScroll);
+        this.updateContainProperty();
+        window.addEventListener('resize', this.updateContainProperty);
     },
     destroyed() {
         window.removeEventListener('scroll', this.handleScroll);
@@ -80,6 +98,13 @@ export default {
         },
         handleScroll() {
             this.isScrolled = window.scrollY > 20;
+        },
+        updateContainProperty() {
+            if (window.innerWidth > 600) {
+                this.shouldContain = true;
+            } else {
+                this.shouldContain = false;
+            }
         }
     },
 };
