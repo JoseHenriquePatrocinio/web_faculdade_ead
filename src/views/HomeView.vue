@@ -5,37 +5,75 @@
             <v-card>
                 <v-tabs v-model="tab" color="deep-purple-accent-4" class="d-flex justify-center">
                     <v-tab :value="1" @click="scrollToTopic('inicio')">Início</v-tab>
-                    <v-tab :value="2" @click="scrollToTopic('sobre-nos')">Sobre Nós</v-tab>
+                    <v-tab :value="2" @click="scrollToTopic('objetivo')">Objetivo</v-tab>
                     <v-tab :value="3" @click="scrollToTopic('cursos')">Cursos</v-tab>
                 </v-tabs>
+
+                <!-- Banner -->
+                <div id="main-banner">
+                    <h1>Escola Sistêmica</h1>
+                </div>
             </v-card>
 
             <br>
 
             <!-- Início -->
             <v-card id="inicio">
-                <v-card-title class="headline font-weight-bold">Bem-vindo à nossa faculdade!</v-card-title>
+                <v-card-title class="headline font-weight-bold">Boas vindas à Escola Sistêmica!</v-card-title>
                 <v-card-text>
-                    Aqui você encontrará uma educação de qualidade para impulsionar o seu futuro.
+                    Somos uma instituição comprometida em fornecer educação de excelência, preparando nossos alunos para
+                    enfrentarem com destreza e confiança os desafios complexos e dinâmicos do mundo real, capacitando-os
+                    não apenas com conhecimento teórico, mas também com habilidades práticas e uma mentalidade
+                    resiliente e inovadora, visando não apenas o sucesso individual, mas também contribuindo para o
+                    progresso e desenvolvimento da sociedade como um todo.
                 </v-card-text>
             </v-card>
 
             <br>
 
             <!-- Sobre nós -->
-            <v-card id="sobre-nos">
-                <v-card-title class="headline font-weight-bold">Sobre Nós</v-card-title>
+            <v-card id="objetivo">
+                <v-card-title class="headline font-weight-bold">Objetivo</v-card-title>
                 <v-card-text>
-                    Somos uma instituição comprometida em fornecer educação de excelência, preparando nossos alunos para
-                    os desafios do mundo real.
+                    <h3>Missão:</h3>
+                    <p>Nossa missão é promover a transformação positiva na vida dos nossos alunos, fornecendo uma
+                        educação de excelência que os capacite a alcançar seu pleno potencial acadêmico, profissional e
+                        pessoal. Estamos comprometidos em oferecer um ambiente de aprendizado inspirador, centrado no
+                        aluno, que promova o pensamento crítico, a criatividade e a inovação, preparando-os para os
+                        desafios e oportunidades do mundo contemporâneo.</p>
+
+                    <h3>Visão:</h3>
+                    <p>Nossa visão é ser reconhecidos como uma instituição de referência em educação de qualidade,
+                        conhecida por sua excelência acadêmica, compromisso com a inovação educacional e impacto
+                        positivo na comunidade. Buscamos ser líderes na formação de profissionais éticos, responsáveis,
+                        e preparados para enfrentar os desafios globais, contribuindo assim para um mundo mais justo,
+                        sustentável e inclusivo.</p>
+
+                    <h3>Valores:</h3>
+                    <ul>
+                        <li><strong>Excelência:</strong> Buscamos a excelência em tudo o que fazemos, desde o ensino e
+                            aprendizado até a administração e serviços oferecidos aos nossos alunos e comunidade.</li>
+                        <li><strong>Integridade:</strong> Pautamos nossas ações na mais alta ética e integridade,
+                            cultivando relações de confiança e respeito mútuo.</li>
+                        <li><strong>Inovação:</strong> Estamos sempre em busca de novas abordagens e soluções criativas
+                            para melhorar continuamente nossa oferta educacional e atender às necessidades em constante
+                            evolução dos nossos alunos e da sociedade.</li>
+                        <li><strong>Empoderamento:</strong> Valorizamos e incentivamos a autonomia, a iniciativa e o
+                            desenvolvimento pessoal e profissional de nossos alunos, preparando-os para serem agentes de
+                            mudança e liderança em suas áreas de atuação.</li>
+                        <li><strong>Responsabilidade Social e Ambiental:</strong> Comprometemo-nos a agir de forma
+                            socialmente responsável, promovendo a inclusão, a diversidade e a sustentabilidade em todas
+                            as nossas atividades e operações.</li>
+                    </ul>
                 </v-card-text>
             </v-card>
+
 
             <br>
 
             <!-- Cursos -->
             <v-card id="cursos">
-                <v-card-title class="headline font-weight-bold">Cursos</v-card-title>
+                <v-card-title class="headline font-weight-bold">Nossos Cursos</v-card-title>
                 <v-carousel>
                     <v-carousel-item
                         src="https://img.freepik.com/psd-gratuitas/modelo-de-impressao-de-marketing-com-foto_23-2148947056.jpg?w=740&t=st=1711428170~exp=1711428770~hmac=2fb3e31dbd720bf801e5bb7e2f9d054cf1a122c5cfef7d26d8d4a1184ee4e723"
@@ -68,8 +106,24 @@
 
         </v-container>
         <!-- Footer -->
-        <v-footer color="indigo" class="mt-16">
-            <span class="white--text">&copy; 2024 Escola Sistêmica</span>
+        <v-footer dark padless>
+            <v-card class="flex" flat tile>
+                <v-card-title class="blue darken-4">
+                    <strong class="subheading">Conecte-se conosco nas redes sociais!</strong>
+
+                    <v-spacer></v-spacer>
+
+                    <v-btn v-for="icon in icons" :key="icon" class="mx-4" dark icon>
+                        <v-icon size="24px">
+                            {{ icon }}
+                        </v-icon>
+                    </v-btn>
+                </v-card-title>
+
+                <v-card-text class="py-2 white--text text-center">
+                    {{ new Date().getFullYear() }} — <strong>Escola Sistêmica</strong>
+                </v-card-text>
+            </v-card>
         </v-footer>
     </div>
 </template>
@@ -82,7 +136,13 @@ export default {
     data: () => ({
         tab: null,
         isScrolled: false,
-        shouldContain: false
+        shouldContain: false,
+        icons: [
+            'mdi-facebook',
+            'mdi-twitter',
+            'mdi-linkedin',
+            'mdi-instagram',
+        ],
     }),
     mounted() {
         window.addEventListener('scroll', this.handleScroll);
@@ -145,5 +205,32 @@ export default {
 
 .mt-16 {
     margin-top: 16px;
+}
+
+#main-banner {
+    background-image: url("https://img.freepik.com/psd-gratuitas/modelo-de-banner-de-narrativa-com-foto_23-2148945593.jpg?w=826&t=st=1711433794~exp=1711434394~hmac=886371e2e43c7813179f1fde76df29d7473f7606aa22d714b9f7875983097239");
+    background-position: 0;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+#main-banner h1 {
+    color: #FFF;
+    background-color: #222;
+    padding: 20px 40px;
+}
+
+@media screen and (max-width: 600px) {
+    #main-banner h1 {
+        opacity: 0.7;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #main-banner {
+        height: 300px;
+    }
 }
 </style>
