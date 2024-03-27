@@ -6,7 +6,9 @@
                 <v-tabs v-model="tab" color="deep-purple-accent-4" class="d-flex justify-center">
                     <v-tab :value="1" @click="scrollToTopic('inicio')">Início</v-tab>
                     <v-tab :value="2" @click="scrollToTopic('objetivo')">Objetivo</v-tab>
+                    <v-tab :value="3" @click="scrollToTopic('docente')">Especialistas</v-tab>
                     <v-tab :value="3" @click="scrollToTopic('cursos')">Cursos</v-tab>
+                    <v-tab :value="3" @click="scrollToTopic('depoimentos')">Depoimentos</v-tab>
                 </v-tabs>
 
                 <!-- Banner -->
@@ -68,6 +70,38 @@
                 </v-card-text>
             </v-card>
 
+            <br>
+
+            <!-- Corpo docente -->
+            <v-card id="docente">
+                <v-card-title class="headline font-weight-bold">Nossos especialistas</v-card-title>
+                <v-row>
+                    <v-col cols="4" class="text-center">
+                        <v-avatar size="80">
+                            <img src="https://img.freepik.com/fotos-gratis/retrato-de-uma-jovem-sorrindo_23-2149260597.jpg?t=st=1711499002~exp=1711502602~hmac=3face60b7815c3878960ef390f56ff0d1352627d1ea42d57e741133208394dcb&w=996"
+                                alt="Célia Almada">
+                        </v-avatar>
+                        <p class="font-weight-bold">Célia Almada</p>
+                        <p>Mestre em Tecnologia</p>
+                    </v-col>
+                    <v-col cols="4" class="text-center">
+                        <v-avatar size="80">
+                            <img src="https://img.freepik.com/fotos-gratis/homem-retrato-rindo_23-2148859448.jpg?t=st=1711498954~exp=1711502554~hmac=626446ffae674daae4ebf994f42614164ef5ec9b4f7ef66879ac7ef7d754f2da&w=740"
+                                alt="Frank Kinney">
+                        </v-avatar>
+                        <p class="font-weight-bold">Frank Kinney</p>
+                        <p>Doutor em Matemática Aplicada</p>
+                    </v-col>
+                    <v-col cols="4" class="text-center">
+                        <v-avatar size="80">
+                            <img src="https://img.freepik.com/fotos-gratis/jovem-sorridente-e-desajeitado-com-oculos-posando_176420-30012.jpg?w=996&t=st=1711499150~exp=1711499750~hmac=8279e5ae756bb5c3af25204e2b17ca425a62dfe6eb86e72359551583fdf4d3eb"
+                                alt="Nick Johnson">
+                        </v-avatar>
+                        <p class="font-weight-bold">Nick Johnson</p>
+                        <p>Mestre em Engenharia Civil</p>
+                    </v-col>
+                </v-row>
+            </v-card>
 
             <br>
 
@@ -98,6 +132,24 @@
 
             <br>
 
+            <!-- Depoimentos -->
+            <v-card id="depoimentos">
+                <v-card-title class="headline font-weight-bold">Depoimentos</v-card-title>
+                <v-row>
+                    <v-col v-for="person in people" :key="person.name" cols="12" sm="6" md="4" lg="3">
+                        <v-card outlined class="mb-4">
+                            <v-img :src="person.avatar" height="200"></v-img>
+                            <v-card-text class="text-center">
+                                {{ person.text }}
+                            </v-card-text>
+                            <v-card-subtitle class="text-center">{{ person.name }}</v-card-subtitle>
+                        </v-card>
+                    </v-col>
+                </v-row>
+            </v-card>
+
+            <br>
+
             <!-- Botão de Voltar ao Topo -->
             <v-btn fab bottom right class="back-to-top" :class="{ 'show': isScrolled }" @click="scrollToTop"
                 style="position: fixed; z-index: 9999;">
@@ -105,6 +157,7 @@
             </v-btn>
 
         </v-container>
+
         <!-- Footer -->
         <v-footer dark padless>
             <v-card class="flex" flat tile>
@@ -142,6 +195,48 @@ export default {
             'mdi-twitter',
             'mdi-linkedin',
             'mdi-instagram',
+        ],
+        "people": [
+            {
+                "name": "STELLA LARSON",
+                "text": "Estou extremamente satisfeita com minha experiência na faculdade. Os professores são incrivelmente competentes e prestativos, e a grade curricular é desafiadora, mas gratificante.",
+                "avatar": "https://via.placeholder.com/150"
+            },
+            {
+                "name": "NICK JOHNSON",
+                "text": "Estou muito feliz com minha escolha de faculdade. O ambiente acadêmico é inspirador e motivador, e as oportunidades de aprendizado são infinitas. Mal posso esperar para ver o que o futuro reserva!",
+                "avatar": "https://via.placeholder.com/150"
+            },
+            {
+                "name": "OLGA IVANOVA",
+                "text": "Minha experiência na faculdade tem sido incrível. A qualidade do ensino é excepcional e as atividades extracurriculares enriquecem ainda mais meu aprendizado. Estou grata por fazer parte dessa comunidade acadêmica.",
+                "avatar": "https://via.placeholder.com/150"
+            },
+            {
+                "name": "PAUL HDSON",
+                "text": "Estou muito satisfeito com minha jornada universitária. Os recursos disponíveis e o suporte da equipe acadêmica tornaram minha experiência educacional muito gratificante. Estou ansioso para aplicar o que aprendi no mundo real.",
+                "avatar": "https://via.placeholder.com/150"
+            },
+            {
+                "name": "DINHEIRO HDSON",
+                "text": "Minha jornada na faculdade tem sido repleta de aprendizado e crescimento pessoal. Os desafios acadêmicos me incentivaram a superar meus limites e me prepararam para os desafios futuros. Estou muito grato pela oportunidade de estudar aqui.",
+                "avatar": "https://via.placeholder.com/150"
+            },
+            {
+                "name": "MIKE PERRY",
+                "text": "Não poderia estar mais satisfeito com minha experiência na universidade. Os professores são apaixonados pelo que fazem e estão sempre disponíveis para ajudar. Estou confiante de que estou recebendo uma educação de alta qualidade.",
+                "avatar": "https://via.placeholder.com/150"
+            },
+            {
+                "name": "VITO JAVASCRIPTO",
+                "text": "Estou aproveitando ao máximo minha jornada universitária. As oportunidades de networking e as experiências práticas oferecidas pela faculdade estão me preparando bem para minha futura carreira. Sou grato por esta oportunidade de crescimento.",
+                "avatar": "https://via.placeholder.com/150"
+            },
+            {
+                "name": "JONHNNY JSON",
+                "text": "Minha experiência na faculdade tem sido excepcional. A atmosfera colaborativa e o ambiente de aprendizado estimulante tornam cada dia emocionante. Mal posso esperar para ver onde minha educação me levará.",
+                "avatar": "https://via.placeholder.com/150"
+            }
         ],
     }),
     mounted() {
@@ -231,6 +326,24 @@ export default {
 @media screen and (max-width: 600px) {
     #main-banner {
         height: 300px;
+    }
+}
+
+.testimonial-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.testimonial-container v-col {
+    flex: 0 0 calc(33.33% - 16px);
+    margin: 8px;
+}
+
+
+@media (max-width: 768px) {
+    .testimonial-container v-col {
+        flex: 0 0 calc(50% - 16px);
     }
 }
 </style>
