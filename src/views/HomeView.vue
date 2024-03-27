@@ -200,42 +200,42 @@ export default {
             {
                 "name": "STELLA LARSON",
                 "text": "Estou extremamente satisfeita com minha experiência na faculdade. Os professores são incrivelmente competentes e prestativos, e a grade curricular é desafiadora, mas gratificante.",
-                "avatar": "https://via.placeholder.com/150"
+                "avatar": "https://img.freepik.com/fotos-gratis/na-moda-jovem-olhando-feliz_1298-527.jpg?w=740&t=st=1711508710~exp=1711509310~hmac=d052de809f8af2063d5f0cd85c59688f410dcd159e4d6f80df10f843f4e0f6dd"
             },
             {
                 "name": "NICK JOHNSON",
                 "text": "Estou muito feliz com minha escolha de faculdade. O ambiente acadêmico é inspirador e motivador, e as oportunidades de aprendizado são infinitas. Mal posso esperar para ver o que o futuro reserva!",
-                "avatar": "https://via.placeholder.com/150"
+                "avatar": "https://img.freepik.com/fotos-gratis/jovem-vestindo-uma-roupa-azul-olhando-engracado_1298-424.jpg?w=740&t=st=1711508573~exp=1711509173~hmac=f6b1f5212c3586d9dc808d62267d74248703fb8be70f149d4c82fc5779c7a2da"
             },
             {
                 "name": "OLGA IVANOVA",
                 "text": "Minha experiência na faculdade tem sido incrível. A qualidade do ensino é excepcional e as atividades extracurriculares enriquecem ainda mais meu aprendizado. Estou grata por fazer parte dessa comunidade acadêmica.",
-                "avatar": "https://via.placeholder.com/150"
+                "avatar": "https://img.freepik.com/fotos-premium/um-retrato-de-uma-mulher-caucasiana-estudante-universitaria-na-biblioteca-profundidade-de-campo-rasa_600776-18548.jpg?w=740"
             },
             {
                 "name": "PAUL HDSON",
                 "text": "Estou muito satisfeito com minha jornada universitária. Os recursos disponíveis e o suporte da equipe acadêmica tornaram minha experiência educacional muito gratificante. Estou ansioso para aplicar o que aprendi no mundo real.",
-                "avatar": "https://via.placeholder.com/150"
+                "avatar": "https://img.freepik.com/fotos-premium/latino-caucasiano-vestido-casualmente-com-os-bracos-cruzados-sobre-um-fundo-branco_1071113-349.jpg?w=740"
             },
             {
                 "name": "DINHEIRO HDSON",
                 "text": "Minha jornada na faculdade tem sido repleta de aprendizado e crescimento pessoal. Os desafios acadêmicos me incentivaram a superar meus limites e me prepararam para os desafios futuros. Estou muito grato pela oportunidade de estudar aqui.",
-                "avatar": "https://via.placeholder.com/150"
+                "avatar": "https://img.freepik.com/fotos-gratis/jovem-vestindo-uma-roupa-azul-vestindo-capacete-vermelho-apontando-para_1298-240.jpg?w=740&t=st=1711508756~exp=1711509356~hmac=b0897b6d5e1d6eb5f8bb3fe060440eaa8be5e6301bfc9a0f59477964c2ec7853"
             },
             {
-                "name": "MIKE PERRY",
+                "name": "MARY JANE",
                 "text": "Não poderia estar mais satisfeito com minha experiência na universidade. Os professores são apaixonados pelo que fazem e estão sempre disponíveis para ajudar. Estou confiante de que estou recebendo uma educação de alta qualidade.",
-                "avatar": "https://via.placeholder.com/150"
+                "avatar": "https://img.freepik.com/fotos-premium/aluno-feliz-com-o-aprendizado-on-line-estudo-por-tecnologia-de-conteudo-elearning-com-telefone-celular-profundidade-de-campo-rasa_600776-12737.jpg?w=740"
             },
             {
                 "name": "VITO JAVASCRIPTO",
                 "text": "Estou aproveitando ao máximo minha jornada universitária. As oportunidades de networking e as experiências práticas oferecidas pela faculdade estão me preparando bem para minha futura carreira. Sou grato por esta oportunidade de crescimento.",
-                "avatar": "https://via.placeholder.com/150"
+                "avatar": "https://img.freepik.com/fotos-gratis/o-homem-que-veste-um-laco-vermelho-piscar-de-olho_1298-320.jpg?w=740&t=st=1711508950~exp=1711509550~hmac=078178e78069e49a33d1100a3e94dd806cb79e992a49ec44ecbd9fe54faa66d5"
             },
             {
                 "name": "JONHNNY JSON",
                 "text": "Minha experiência na faculdade tem sido excepcional. A atmosfera colaborativa e o ambiente de aprendizado estimulante tornam cada dia emocionante. Mal posso esperar para ver onde minha educação me levará.",
-                "avatar": "https://via.placeholder.com/150"
+                "avatar": "https://img.freepik.com/fotos-premium/homem-negro-bonito-sentado-e-usando-laptop-dentro-de-casa_251136-89394.jpg"
             }
         ],
     }),
